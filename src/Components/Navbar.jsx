@@ -6,20 +6,23 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <div className="font-bold text-xl">Tienda React</div>
-      <ul className="flex items-center gap-6">
-        <li>
-          <Link to="/" className="hover:underline">Inicio</Link>
-        </li>
-        <li>
-          <Link to="/productos" className="hover:underline">Productos</Link>
-        </li>
-       <li>
-          <CartWidget />
-        </li>
-      </ul>
-    </nav>
+<nav className="navbar navbar-expand-lg navbar-dark bg-primary px-4 py-3">
+  <div className="container-fluid d-flex justify-content-between align-items-center">
+    <span className="navbar-brand fw-bold fs-4">Tienda React</span>
+    <ul className="navbar-nav d-flex flex-row gap-4 align-items-center mb-0">
+      <li className="nav-item">
+        <Link to="/" className="nav-link text-white">Inicio</Link>
+      </li>
+      <li className="nav-item">
+        <Link to="/productos" className="nav-link text-white">Productos</Link>
+      </li>
+      <li className="nav-item">
+        <CartWidget />
+      </li>
+    </ul>
+  </div>
+</nav>
+
   );
 };
 

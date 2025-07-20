@@ -2,10 +2,14 @@ import Item from "./Item";
 
 const ItemList = ({ productos }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-      {productos.map((producto) => (
-        <Item key={producto.id} producto={producto} />
-      ))}
+    <div className="container mt-4">
+      <div className="row">
+        {productos.map((producto) => (
+          <div className="col-12 col-md-4 mb-4" key={producto.id}>
+            <Item producto={producto} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

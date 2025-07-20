@@ -12,16 +12,17 @@ const ProductosPage = () => {
   const { agregarAlCarrito } = useContext(CartContext);
 
   return (
-    <div className="p-6 flex flex-wrap gap-4 justify-center">
-      {productos.map((p) => (
-        <ProductCard
-          key={p.id}
-          nombre={p.nombre}
-          precio={p.precio}
-          onAgregar={() => agregarAlCarrito(p)}
-        />
-      ))}
-    </div>
+<div className="container py-4 d-flex flex-wrap justify-content-center gap-3">
+  {productos.map((p) => (
+    <ProductCard
+      key={p.id}
+      nombre={p.nombre}
+      precio={p.precio}
+      onAgregar={() => agregarAlCarrito(p)}
+    />
+  ))}
+</div>
+
   );
 };
 

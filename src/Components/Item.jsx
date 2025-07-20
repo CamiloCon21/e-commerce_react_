@@ -2,15 +2,17 @@ import { Link } from "react-router-dom";
 
 const Item = ({ producto }) => {
   return (
-    <div className="bg-white p-4 rounded shadow">
-      <h3 className="text-lg font-semibold">{producto.nombre}</h3>
-      <p className="text-gray-600">${producto.precio}</p>
-      <Link
-        to={`/detalle/${producto.id}`}
-        className="mt-2 inline-block bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700"
-      >
-        Ver más
-      </Link>
+    <div className="card h-100 shadow-sm">
+      <div className="card-body">
+        <h5 className="card-title">{producto.nombre}</h5>
+        <p className="card-text">${producto.precio}</p>
+        <Link
+          to={`/detalle/${producto.id}`}
+          className="btn btn-primary mt-2"
+        >
+          Ver más
+        </Link>
+      </div>
     </div>
   );
 };

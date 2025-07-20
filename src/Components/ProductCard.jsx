@@ -1,18 +1,21 @@
-import React from "react";
+
 
 const ProductCard = ({ nombre, precio, onAgregar }) => {
-  return (
-    <div className="bg-white rounded-lg shadow-md p-4 w-64">
-      <h2 className="text-lg font-semibold mb-2">{nombre}</h2>
-      <p className="text-gray-700 mb-2">${precio}</p>
+return (
+  <div className="card shadow-sm p-3 mb-3" style={{ width: "16rem" }}>
+    <div className="card-body">
+      <h5 className="card-title fw-semibold">{nombre}</h5>
+      <p className="card-text text-muted">${precio}</p>
       <button
         onClick={onAgregar}
-        className="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition"
+        className="btn btn-warning text-white"
       >
         Agregar al carrito
       </button>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default ProductCard;

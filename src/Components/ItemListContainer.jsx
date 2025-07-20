@@ -29,10 +29,11 @@ const ItemListContainer = ({ greeting }) => {
   }, []);
 
   return (
-    <div className="p-4">
-      <h2 className="text-xl font-bold mb-4">{greeting}</h2>
-      <ItemList productos={productos} />
-    </div>
+ <div className="container mt-4">
+  <h2 className="h4 fw-bold mb-4">{greeting}</h2>
+  <ItemList productos={productos} />
+</div>
+
   );
 };
 
