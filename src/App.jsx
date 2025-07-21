@@ -8,14 +8,15 @@ import ItemDetailContainer from "./Components/ItemDetailContainer";
 import CarritoPage from "./Components/CarritoPage";
 import Checkout from "./Components/Checkout";
 import { Container } from "react-bootstrap";
+import Home from "./Components/home";
 
 const App = () => {
   return (
     <>
-      <Navbar /> {/* ocupa todo el ancho */}
+      <Navbar /> 
       <Container className="mt-4">
         <Routes>
-          <Route path="/" element={<h1>Bienvenido a la Tienda</h1>} />
+          <Route path="/" element={<Home />} />
           <Route path="/productos" element={<ItemListContainer greeting="Nuestros productos" />} />
           <Route path="/detalle/:id" element={<ItemDetailContainer />} />
           <Route path="/carrito" element={<CarritoPage />} />
